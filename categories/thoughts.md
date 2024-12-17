@@ -1,12 +1,15 @@
 ---
-layout: category
-title: thoughts - keltan's blog
-category: thoughts
+layout: default
+title: keltan's blog - thoughts
 ---
 
-# thoughts
-*all posts in the thoughts category*
+<h1>Thoughts</h1>
+<p>keltan's collection of thoughts and musings</p>
 
-{% for post in site.categories.thoughts %}
-- {{ post.date | date: "%Y-%m-%d" }} [{{ post.title }}]({{ post.url }})
+{% assign category_posts = site.categories.thoughts %}
+{% for post in category_posts %}
+  <article>
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+  </article>
 {% endfor %}
