@@ -1,2 +1,2 @@
-# notkeltan.github.io
+# keltan.github.io
 The repository for my website
