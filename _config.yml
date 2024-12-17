@@ -1,9 +1,11 @@
 theme: minima
-title: "keltan's Repository"
-description: "The repository for my website"
+title: "keltan's blog"
+description: "keltan's thoughts and explorations"
 author: keltan
 show_downloads: false
-google_analytics: # Optional - leave empty for now
+domain: keltan.studio
+url: https://keltan.studio
+baseurl: ""
 plugins:
   - jekyll-feed
   - jekyll-sitemap
