@@ -3,8 +3,6 @@ layout: default
 title: keltan's blog - categories
 ---
 
-<h1>Categories</h1>
-
 {% for category in site.categories %}
   <h2>
     <a href="/categories/{{ category[0] | slugify }}">{{ category[0] }}</a>
