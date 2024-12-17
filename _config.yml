@@ -1,1 +1,9 @@
 theme: jekyll-theme-minimal
+title: "Notkeltan's Blog"
+description: "The repository for my website"
+author: Notkeltan
+show_downloads: false
+google_analytics: # Optional - leave empty for now
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
