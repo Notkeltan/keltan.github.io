@@ -1,6 +1,5 @@
 ---
 layout: home
-title: keltan's blog
 ---
 
 # Categories
