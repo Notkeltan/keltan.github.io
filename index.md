@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Home
+title: "keltan's blog"
 ---
 
-Welcome to my blog! Here you'll find my latest posts and thoughts.
+Welcome to my blog! Here you'll find my posts and thoughts.
