@@ -1,7 +1,7 @@
 theme: jekyll-theme-minimal
-title: "Notkeltan's Blog"
+title: "keltan's Repository"
 description: "The repository for my website"
-author: Notkeltan
+author: keltan
 show_downloads: false
 google_analytics: # Optional - leave empty for now
 plugins:
