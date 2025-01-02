@@ -1,8 +1,7 @@
 ---
 layout: home
+title: "Posts"
 ---
-
-# Posts
 
 {% for post in site.posts %}
 <article class="post-preview">

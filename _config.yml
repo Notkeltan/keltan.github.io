@@ -9,3 +9,8 @@ baseurl: ""
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+
+collections:
+  tags:
+    output: true
+    permalink: /tags/:path/
