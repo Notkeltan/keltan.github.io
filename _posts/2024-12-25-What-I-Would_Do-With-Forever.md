@@ -2,7 +2,7 @@
 layout: post
 title: "What I Would Do With Forever"
 date: 2024-12-25
-tags: [thoughts, prompts]
+tags: [thoughts]
 ---
 
 I wrote this script some time last year. With the goal of encoraging people to not want to die because they'll "get bored".
