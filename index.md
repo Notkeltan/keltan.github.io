@@ -11,7 +11,7 @@ title: "Posts"
     {% if post.tags %}
     <span class="tags">
       {% for tag in post.tags %}
-      <a href="/tags/#{{ tag | slugify }}" class="tag">#{{ tag }}</a>
+      <a href="/tags/{{ tag | slugify }}" class="tag">#{{ tag }}</a>
       {% endfor %}
     </span>
     {% endif %}
