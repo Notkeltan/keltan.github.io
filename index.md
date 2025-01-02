@@ -2,16 +2,25 @@
 layout: home
 ---
 
-## Categories
-
-{% for category in site.categories %}
-- [{{ category[0] | capitalize }}](/categories/{{ category[0] | slugify }}) ({{ category[1].size }} posts)
-{% endfor %}
-
----
-
-# All Posts
+# Posts
 
 {% for post in site.posts %}
-- {{ post.date | date: "%Y-%m-%d" }} [{{ post.title }}]({{ post.url }})
+<article class="post-preview">
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <div class="post-meta">
+    <span class="date">{{ post.date | date: "%B %d, %Y" }}</span>
+    {% if post.tags %}
+    <span class="tags">
+      {% for tag in post.tags %}
+      <a href="/tags/{{ tag | slugify }}" class="tag">#{{ tag }}</a>
+      {% endfor %}
+    </span>
+    {% endif %}
+  </div>
+  {% if post.excerpt %}
+  <div class="excerpt">
+    {{ post.excerpt }}
+  </div>
+  {% endif %}
+</article>
 {% endfor %}

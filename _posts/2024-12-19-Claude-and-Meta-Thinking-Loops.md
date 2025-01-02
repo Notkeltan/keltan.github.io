@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Claude and Meta Puzzle Solving Loops"
-date: 2024-12-17
-categories: [prompts, cognitive-strategies, Decision-Theory]
+date: 2024-12-19
+tags: [cognitive-strategies, decision-theory]
 ---
 Last night I had several wonderful storkes of insight into how I can make decisions faster. I ended up with this thinking loop I have not yet tried.
 
