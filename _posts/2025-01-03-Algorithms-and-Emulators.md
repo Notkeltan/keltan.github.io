@@ -2,6 +2,7 @@
 layout: post
 title: "Algorithms and Emulators"
 date: 2025-01-03
+published: false
 tags: [ai-alignment, algorithms, consciousness, prediction-systems, behavioral-analysis, neural-networks,social-media,tiktok,youtube,pinterest]
 ---
 
