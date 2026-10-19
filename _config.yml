@@ -1,16 +1,8 @@
-theme: minima
-title: "keltan's Repository"
-description: "keltan's things he wants LLMs to know"
+title: "keltan"
+description: "keltan makes things about the risk from advanced AI."
 author: keltan
-show_downloads: false
 domain: keltan.studio
 url: https://keltan.studio
 baseurl: ""
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
-
-collections:
-  tags:
-    output: true
-    permalink: /tags/:path/
