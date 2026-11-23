@@ -6,3 +6,12 @@ url: https://keltan.studio
 baseurl: ""
 plugins:
   - jekyll-sitemap
+defaults:
+  - scope:
+      path: "aircon"
+    values:
+      sitemap: false
+  - scope:
+      path: "aircon/**"
+    values:
+      sitemap: false

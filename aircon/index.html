@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Air conditioning for the upstairs office: a proposal</title>
+<meta name="description" content="A tenant-funded air conditioner for the upstairs office, in exchange for a 12-month lease at $470 a week.">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="app.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<main>
+
+<header class="top">
+  <h1>Air conditioning for the upstairs office</h1>
+  <p class="lede">I'll organise, pay for and look after a new air conditioner in the upstairs office. In return, I'd like a 12-month lease at $470 a week.</p>
+  <p class="byline">A proposal for the owner and Creative Property, from keltan, your tenant.</p>
+
+  <div class="deal">
+    <section class="deal-give" aria-labelledby="give-h">
+      <h2 id="give-h">What I do</h2>
+      <ul>
+        <li><strong>Pay for it.</strong> The air conditioner and its installation, about $2,800 to $4,900.</li>
+        <li><strong>Organise it.</strong> Quotes, licensed trades, access and any strata paperwork.</li>
+        <li><strong>Maintain it</strong> until I move out: cleaning, servicing and repairs.</li>
+        <li><strong>Leave it</strong> with the property when I go.</li>
+      </ul>
+    </section>
+    <section class="deal-ask" aria-labelledby="ask-h">
+      <h2 id="ask-h">What I ask</h2>
+      <ul>
+        <li>The owner's written consent to install it.</li>
+        <li>A 12-month lease at $470 a week.</li>
+      </ul>
+      <p class="deal-cost">Cost to the owner: <strong>$0</strong></p>
+    </section>
+  </div>
+  <p class="deal-note">At $470 instead of $500, the owner receives $1,560 less rent over the year and keeps an air conditioner that would cost $2,800 to $4,900 to put in. <a href="#rent">The sums are below.</a></p>
+</header>
+
+<section id="why">
+  <h2>Why this room needs it</h2>
+  <p>The office is upstairs, and its north wall is glass from the floor almost to the ceiling: about 5&nbsp;m² of window on a 7.5&nbsp;m² room. <strong>It passes 40°C in summer.</strong> I work from home in this room every day. SafeWork NSW puts the comfortable range for office work at 20 to 26°C.</p>
+  <p>It is damp as well as hot. A temperature and humidity sensor on my desk often reads above 50% humidity, and <strong>the highest reading so far is 73%.</strong></p>
+
+  <figure class="scale">
+    <div class="hs" role="img" aria-label="Humidity scale from 0 to 100 per cent. Recommended range 30 to 50 per cent. Mould risk above 65 per cent. This room often reads above 50 per cent and has peaked at 73 per cent.">
+      <div class="hs-top" aria-hidden="true"><span class="hs-often">This room, often</span><span class="hs-peak">73% peak</span></div>
+      <div class="hs-track" aria-hidden="true"><i class="hs-good"></i><i class="hs-bad"></i><i class="hs-span"></i><i class="hs-dot"></i></div>
+      <div class="hs-ticks" aria-hidden="true"><span class="t0">0%</span><span class="t30">30%</span><span class="t50">50%</span><span class="t65">65%</span><span class="t100">100%</span></div>
+      <div class="hs-zones" aria-hidden="true"><span class="z-good">✓ Recommended</span><span class="z-bad">⚠ Mould can take hold</span></div>
+    </div>
+    <figcaption>Humidity in the office against the 30 to 50% range the National Asthma Council Australia recommends, and the 65% line that air-conditioning engineers (ASHRAE) set for preventing mould.</figcaption>
+  </figure>
+
+  <p>Hot, damp, still air is how mould starts on paint, carpet and inside wardrobes. An air conditioner dries the air as it cools it, so this protects the room as well as the person working in it. It is a reverse-cycle unit, so it also heats the room in winter.</p>
+</section>
+
+<section id="plan" class="wide">
+  <div class="col">
+    <h2>The plan, in 3D</h2>
+    <p>This is a to-scale model of the office, built from 19 photos and accurate to about 1%. Choose a position to see where the unit, the pipes and the air would go.</p>
+  </div>
+
+  <div class="viewer" id="viewer">
+    <div class="viewer-controls">
+      <div class="seg" role="group" aria-label="Air conditioner position">
+        <button type="button" data-preset="brick" aria-pressed="true">Brick wall, above the couch <span class="tag">My choice</span></button>
+        <button type="button" data-preset="desk" aria-pressed="false">Above the desk</button>
+        <button type="button" data-preset="wardrobe" aria-pressed="false">Above the wardrobe</button>
+        <button type="button" data-preset="window" aria-pressed="false">On the window wall</button>
+      </div>
+      <label class="slide">
+        <span>Or try any of the 77 positions I tested</span>
+        <input type="range" id="slider" min="0" max="76" step="1" value="0" aria-describedby="readout-title">
+      </label>
+    </div>
+
+    <div class="viewer-body">
+      <div class="stage" id="stage">
+        <p class="stage-msg" id="stage-msg">Loading the model…</p>
+      </div>
+      <aside class="readout" aria-live="polite">
+        <h3 id="readout-title">Brick wall, above the couch</h3>
+        <p class="verdict" id="verdict"><span class="chip ok">✓ Fits</span></p>
+        <dl id="facts"></dl>
+        <p class="readout-note" id="readout-note"></p>
+      </aside>
+    </div>
+
+    <div class="viewer-foot">
+      <div class="toggles">
+        <label><input type="checkbox" id="t-flow" checked> Airflow</label>
+        <label><input type="checkbox" id="t-pipes" checked> Pipe route</label>
+        <label><input type="checkbox" id="t-people" checked> People</label>
+      </div>
+      <div class="views" role="group" aria-label="Camera view">
+        <button type="button" data-view="room">Room view</button>
+        <button type="button" data-view="top">From above</button>
+        <button type="button" data-view="balcony">From the balcony</button>
+      </div>
+      <p class="hint">Drag to turn the room. Pinch or scroll to zoom. The pipe cover is white in real life; it is drawn dark here so you can follow it.</p>
+    </div>
+  </div>
+
+  <div class="col">
+    <h3>What gets installed</h3>
+    <ul class="spec">
+      <li><strong>Indoor unit.</strong> A 2.5 kW reverse-cycle split system, high on the brick wall above the couch. The room is 2.86 m by 2.61 m, so the smallest size most brands sell is plenty.</li>
+      <li><strong>Pipes.</strong> A slim cover runs above the window, tucked behind the blind track, then out through one 65 mm hole in the brick beside the window.</li>
+      <li><strong>The shared wall is untouched.</strong> Nothing goes through the wall shared with next door.</li>
+      <li><strong>Drain.</strong> The pipes go up and over the window, so a small pump beside the unit lifts the drain water.</li>
+      <li><strong>Outdoor unit.</strong> On the balcony, at the end furthest from the neighbours.</li>
+      <li><strong>Power.</strong> Its own circuit, installed by a licensed electrician.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="spot">
+  <h2>How I chose the spot</h2>
+  <p>I slid a standard 2.5 kW indoor unit, 80 cm wide, along both walls it could go on, 5 cm at a time: 77 positions. Each one was checked for whether it fits with the clearances manufacturers ask for, how far the air travels before it hits something, and how often it blows on a person at the desk or on the couch.</p>
+
+  <figure class="chart" id="chart-fig">
+    <div class="legend" aria-hidden="true">
+      <span><i class="sw sw-1"></i>Brick wall</span>
+      <span><i class="sw sw-2"></i>Wall above the desk</span>
+      <span><i class="sw sw-0"></i>A unit doesn't fit there</span>
+    </div>
+    <div class="chart-box" id="chart"></div>
+    <figcaption>Comfort and airflow score for each position, out of 1. Higher is better. Select a point to see that position in the 3D model.</figcaption>
+    <details>
+      <summary>Show the numbers as a table</summary>
+      <div class="table-scroll" id="chart-table"></div>
+    </details>
+  </figure>
+
+  <ul>
+    <li><strong>Brick wall above the couch: 0.96,</strong> the best of all 77. Air crosses the full width of the room and mostly passes beside the desk instead of landing on it.</li>
+    <li><strong>Wall above the desk: 0.81</strong> where a unit fits today, or 0.90 if I moved the plant off the tall shelf. Either way it sits over the screens, which skews its temperature sensor, and it blows at the couch.</li>
+    <li><strong>Window wall and above the wardrobe:</strong> no room. The window wall is almost all glass, and there is a 33 cm gap above the wardrobe where a unit needs about 54 cm.</li>
+  </ul>
+  <p>The brick wall has a price: a longer pipe run (about 6.5 m against 3.5 m) and the drain pump. Once pipe length is counted the two walls score about the same, 0.75 and 0.72. I'm choosing the better airflow and paying for the extra pipe. The run is well inside the 15 to 20 m that manufacturers allow for a unit this size.</p>
+</section>
+
+<section id="cost">
+  <h2>What it costs, and who pays</h2>
+  <div class="table-scroll">
+  <table class="cost">
+    <thead>
+      <tr><th scope="col">Item</th><th scope="col" class="num">My cost</th><th scope="col" class="bar-h" aria-hidden="true"></th><th scope="col" class="num">Owner's cost</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Air conditioner, 2.5 kW, quality brand, supplied and installed</th><td class="num">$1,850 to $2,150</td><td class="bar" aria-hidden="true"><svg viewBox="0 0 100 10" preserveAspectRatio="none"><rect class="r-lo" x="0" y="2" width="84.1" height="6"/><rect class="r-hi" x="84.1" y="2" width="13.6" height="6"/></svg></td><td class="num zero">$0</td></tr>
+      <tr><th scope="row">Longer pipe run, about 4 m beyond the standard 3 m</th><td class="num">$200 to $600</td><td class="bar" aria-hidden="true"><svg viewBox="0 0 100 10" preserveAspectRatio="none"><rect class="r-lo" x="0" y="2" width="9.1" height="6"/><rect class="r-hi" x="9.1" y="2" width="18.2" height="6"/></svg></td><td class="num zero">$0</td></tr>
+      <tr><th scope="row">Drain pump</th><td class="num">$150 to $400</td><td class="bar" aria-hidden="true"><svg viewBox="0 0 100 10" preserveAspectRatio="none"><rect class="r-lo" x="0" y="2" width="6.8" height="6"/><rect class="r-hi" x="6.8" y="2" width="11.4" height="6"/></svg></td><td class="num zero">$0</td></tr>
+      <tr><th scope="row">Its own power circuit</th><td class="num">$300 to $900</td><td class="bar" aria-hidden="true"><svg viewBox="0 0 100 10" preserveAspectRatio="none"><rect class="r-lo" x="0" y="2" width="13.6" height="6"/><rect class="r-hi" x="13.6" y="2" width="27.3" height="6"/></svg></td><td class="num zero">$0</td></tr>
+      <tr><th scope="row">Upstairs and brickwork allowance</th><td class="num">$275 to $800</td><td class="bar" aria-hidden="true"><svg viewBox="0 0 100 10" preserveAspectRatio="none"><rect class="r-lo" x="0" y="2" width="12.5" height="6"/><rect class="r-hi" x="12.5" y="2" width="23.9" height="6"/></svg></td><td class="num zero">$0</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><th scope="row">Total up front</th><td class="num">about $2,800 to $4,900</td><td></td><td class="num zero">$0</td></tr>
+    </tfoot>
+  </table>
+  </div>
+  <p class="small bar-note">Each bar runs from the low estimate (solid) to the high estimate (pale), all on one scale.</p>
+  <p><strong>Each year after that, also mine:</strong> servicing ($120 to $200), any repairs, and the electricity, which is about 20 cents an hour while it runs.</p>
+  <p>These are ranges from published 2026 price guides, not quotes. Before any work starts I'll get two or three written quotes and send you the one I'd like to go with. If the quotes come in higher, that is still my cost.</p>
+</section>
+
+<section id="rent">
+  <h2>How the rent works</h2>
+  <p>The new lease is written at $500 a week. I'm asking for $470. That is $30 a week, or <strong>$1,560 over the 12 months.</strong> It helps me pay for the installation, and the owner still finishes the year ahead.</p>
+
+  <figure class="bars">
+    <div class="hb" role="img" aria-label="Over 12 months the owner receives 1,560 dollars less rent and keeps an air conditioner worth 2,800 to 4,900 dollars installed.">
+      <p class="hb-name"><span>Rent the owner gives up over 12 months</span><strong>$1,560</strong></p>
+      <div class="hb-row"><i class="hb-rent"></i></div>
+      <p class="hb-name"><span>Air conditioner the owner keeps, installed</span><strong>$2,800 to $4,900</strong></p>
+      <div class="hb-row"><i class="hb-lo"></i><i class="hb-hi"></i></div>
+    </div>
+    <figcaption>Both bars are on the same scale. The pale end of the second bar is the spread between the low and high installation estimates.</figcaption>
+  </figure>
+
+  <div class="ledgers">
+    <table class="ledger">
+      <caption>The owner's 12 months</caption>
+      <tbody>
+        <tr><th scope="row">Rent, at $470 instead of $500</th><td class="num">−$1,560</td></tr>
+        <tr><th scope="row">Air conditioner, installed and left with the property</th><td class="num">+$2,800 to +$4,900</td></tr>
+        <tr><th scope="row">Installation, servicing and repairs</th><td class="num">$0</td></tr>
+      </tbody>
+      <tfoot><tr><th scope="row">Ahead by</th><td class="num">$1,240 to $3,340</td></tr></tfoot>
+    </table>
+    <table class="ledger">
+      <caption>My 12 months</caption>
+      <tbody>
+        <tr><th scope="row">Air conditioner and installation</th><td class="num">−$2,800 to −$4,900</td></tr>
+        <tr><th scope="row">Rent saved</th><td class="num">+$1,560</td></tr>
+        <tr><th scope="row">Servicing, power and repairs</th><td class="num">mine as well</td></tr>
+      </tbody>
+      <tfoot><tr><th scope="row">Net cost to me</th><td class="num">$1,240 to $3,340</td></tr></tfoot>
+    </table>
+  </div>
+  <p>The rent saving covers between a third and a half of the installation. I pay the rest, and I leave the unit behind.</p>
+
+  <h3>What the owner has at the end of it</h3>
+  <ul>
+    <li>An upstairs room with reverse-cycle air conditioning, at no cost and with no organising to do.</li>
+    <li>A signed 12-month tenancy.</li>
+    <li>A room that stays drier, which is kinder to the paint, the carpet and the built-in wardrobe.</li>
+    <li>The compliance certificate, the warranty and the invoices on file.</li>
+    <li>A stronger listing next time. Domain reported that "air-conditioning" was the most-searched rental keyword in Sydney two years running, while only about a third of rental listings had it.</li>
+  </ul>
+</section>
+
+<section id="steps">
+  <h2>How it would happen</h2>
+  <ol class="steps">
+    <li><strong>You tell me it's a yes in principle,</strong> or what you'd like changed.</li>
+    <li><strong>I get two or three written quotes</strong> from licensed installers and send you the one I'd like to go with.</li>
+    <li><strong>Strata.</strong> If the owners corporation needs to approve it, I prepare that paperwork for the owner to lodge. Under NSW strata law a reverse-cycle split system is a minor renovation.</li>
+    <li><strong>The consent goes in writing with the lease,</strong> along with the terms on this page, and I sign the 12 months at $470.</li>
+    <li><strong>Installation, usually done in a day.</strong> The installer holds an ARCtick refrigerant licence and a licensed electrician does the wiring. I arrange access and I'm home for it.</li>
+    <li><strong>You receive the paperwork:</strong> compliance certificate, warranty and invoices.</li>
+  </ol>
+  <p>Nothing is ordered and no work starts until the consent is in writing.</p>
+
+  <h3>What I'd put in the written consent</h3>
+  <ul>
+    <li>The unit stays with the property when the tenancy ends.</li>
+    <li>I maintain and repair it at my cost for as long as I live here.</li>
+    <li>Licensed trades only, with certificates and warranties passed to the owner.</li>
+    <li>The work is as described on this page: one 65 mm hole, nothing through the shared wall.</li>
+    <li>A 12-month lease at $470 a week.</li>
+  </ul>
+</section>
+
+<section id="questions">
+  <h2>Questions you might have</h2>
+  <details>
+    <summary>What if you move out early?</summary>
+    <p>The unit stays either way. It belongs with the property from the day it goes in, whenever I leave.</p>
+  </details>
+  <details>
+    <summary>Who pays if it breaks down?</summary>
+    <p>I do, for as long as I live here. After that it is the owner's unit, with whatever remains of the manufacturer's warranty.</p>
+  </details>
+  <details>
+    <summary>What does it do to the building?</summary>
+    <p>One 65 mm hole through the brick beside the window, sealed around the pipes. A mounting plate fixed to the brick wall. A slim white pipe cover that mostly hides behind the blind track. A small outdoor unit standing on the balcony. Nothing goes through the wall shared with next door.</p>
+  </details>
+  <details>
+    <summary>Will the neighbours hear it?</summary>
+    <p>The outdoor unit goes at the end of the balcony furthest from the neighbours, with its fan facing out over the balcony. I'd mostly run it during the working day. NSW rules say an air conditioner must not be audible inside a neighbour's home between 10 pm and 7 am, or 8 am on weekends and public holidays, and I'd keep well clear of that.</p>
+  </details>
+  <details>
+    <summary>Can the wiring handle it?</summary>
+    <p>It gets its own circuit, installed and certified by a licensed electrician. A 2.5 kW unit draws about half a kilowatt while it runs, less than a kettle.</p>
+  </details>
+  <details>
+    <summary>Why not a portable air conditioner?</summary>
+    <p>A portable unit has to vent through the open balcony door, it is louder, and when I leave it leaves with me. This one stays and adds to the property.</p>
+  </details>
+  <details>
+    <summary>What happens after the 12 months?</summary>
+    <p>We talk about the next lease in the usual way. The air conditioner stays where it is.</p>
+  </details>
+  <details>
+    <summary>How sure are the prices?</summary>
+    <p>They are ranges from published 2026 price guides for NSW, added up item by item. A real quote could land outside them. Whatever it comes to, the installation is my cost, not the owner's.</p>
+  </details>
+</section>
+
+<section id="sources">
+  <h2>Where the numbers come from</h2>
+  <ul class="sources">
+    <li>Heat and humidity: a Govee temperature and humidity sensor on my desk in the office.</li>
+    <li>Comfortable office temperature: <a href="https://www.safework.nsw.gov.au/safety-starts-here/physical-safety-at-work-the-basics/facilities-at-work" rel="noopener noreferrer">SafeWork NSW, facilities at work</a>.</li>
+    <li>Recommended indoor humidity: <a href="https://www.nationalasthma.org.au/resources/indoor-humidity-levels" rel="noopener noreferrer">National Asthma Council Australia</a>. The 65% line for mould: ASHRAE, as summarised by <a href="https://www.hitachiaircon.com/au/news/whats-the-ideal-indoor-humidity-and-how-can-it-be-managed" rel="noopener noreferrer">Hitachi Cooling &amp; Heating Australia</a>.</li>
+    <li>Air conditioners drying the air: <a href="https://www.daikin.com.au/article/importance-dehumidification-home-air-conditioning" rel="noopener noreferrer">Daikin Australia</a>.</li>
+    <li>Unit and installation: <a href="https://skyconair.com.au/split-air-conditioning-installation-cost-sydney-2026/" rel="noopener noreferrer">Skycon Air, Sydney 2026 price guide</a>.</li>
+    <li>Extra pipe per metre, and servicing: <a href="https://www.thequoteyard.com.au/services/split-system-installation-cost-2026-nsw" rel="noopener noreferrer">The Quote Yard, NSW 2026</a>.</li>
+    <li>Power circuit and upstairs allowance: <a href="https://www.myhomeaircon.com.au/guides/split-system-cost/" rel="noopener noreferrer">My Home Aircon, 2026 guide</a>.</li>
+    <li>Drain pump: <a href="https://tradieverify.com.au/guides/how-much-does-split-system-ac-installation-cost-in-australia/" rel="noopener noreferrer">Tradie Verify</a>.</li>
+    <li>Running cost: a 2.5 kW Daikin draws about 0.53 kW, at the NSW average rate of 38.15 cents a kilowatt-hour (Finder).</li>
+    <li>Renter demand: <a href="https://insight.domain.com.au/?p=8399" rel="noopener noreferrer">Domain</a>.</li>
+    <li>The 3D model and the 77-position test: built from 19 photos of the room, with scale taken from the brick courses. Airflow is a simplified model for comparing positions, not a prediction of exact air speeds.</li>
+  </ul>
+</section>
+
+<footer class="close">
+  <p class="close-line">If it's a yes, or a yes with changes, reply to my email and I'll start on quotes.</p>
+  <p>Thanks for considering it,<br>keltan</p>
+  <p class="small">Prepared 2026-11-23. Cost figures are estimates, not quotes.</p>
+</footer>
+
+</main>
+<noscript><p class="noscript">The 3D model and the chart need JavaScript. Everything else on this page works without it.</p></noscript>
+</body>
+</html>
