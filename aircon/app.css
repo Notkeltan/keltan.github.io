@@ -195,13 +195,14 @@ td.num, th.num { text-align: right; }
 .hb-row { display: flex; gap: 2px; height: 20px; margin-bottom: 1.1rem; border-left: 1px solid #aeb9c2; }
 .hb-row:last-child { margin-bottom: 0.25rem; }
 .hb-row i { display: block; height: 100%; }
-.hb-rent { width: 31.84%; background: var(--warm); border-radius: 0 4px 4px 0; }
+.hb-rent { width: 63.67%; background: var(--warm); border-radius: 0 4px 4px 0; }
 .hb-lo { width: 57.14%; background: var(--cool); }
 .hb-hi { width: calc(42.86% - 2px); background: var(--cool-pale); border-radius: 0 4px 4px 0; }
 
 .ledgers { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2rem; margin: 1.75rem 0 1.25rem; }
 .ledger caption { text-align: left; font-size: 1.3rem; padding-bottom: 0.4rem; }
 .ledger td { width: 1%; }
+.ledger tfoot td { white-space: normal; min-width: 9rem; }
 @media (max-width: 40rem) { .ledgers { grid-template-columns: 1fr; } }
 
 /* ---------- steps, close ---------- */
