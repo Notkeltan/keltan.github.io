@@ -63,7 +63,7 @@
 <section id="plan" class="wide">
   <div class="col">
     <h2>The plan, in 3D</h2>
-    <p>This is a to-scale model of the office, built from 19 photos and accurate to about 1%. Choose a position to see where the unit, the pipes and the air would go.</p>
+    <p>This is a to-scale model of the office, built from 19 photos and accurate to about 1%. Choose a position to see where the unit and the pipes would go, and where the computer simulation says the air would travel.</p>
   </div>
 
   <div class="viewer" id="viewer">
@@ -75,7 +75,7 @@
         <button type="button" data-preset="window" aria-pressed="false">On the window wall</button>
       </div>
       <label class="slide">
-        <span>Or try any of the 77 positions I tested</span>
+        <span>Or try any of the 77 positions from the computer simulation</span>
         <input type="range" id="slider" min="0" max="76" step="1" value="0" aria-describedby="readout-title">
       </label>
     </div>
@@ -122,7 +122,7 @@
 
 <section id="spot">
   <h2>How I chose the spot</h2>
-  <p>I slid a standard 2.5 kW indoor unit, 80 cm wide, along both walls it could go on, 5 cm at a time: 77 positions. Each one was checked for whether it fits with the clearances manufacturers ask for, how far the air travels before it hits something, and how often it blows on a person at the desk or on the couch.</p>
+  <p>I tested this with a computer simulation, not a real unit. Inside the 3D model of the room, a standard 2.5 kW indoor unit, 80 cm wide, was moved along both walls it could go on, 5 cm at a time: 77 positions. For each one the simulation checked whether the unit fits with the clearances manufacturers ask for, how far the air travels before it hits something, and how often it blows on a person at the desk or on the couch.</p>
 
   <figure class="chart" id="chart-fig">
     <div class="legend" aria-hidden="true">
@@ -131,7 +131,7 @@
       <span><i class="sw sw-0"></i>A unit doesn't fit there</span>
     </div>
     <div class="chart-box" id="chart"></div>
-    <figcaption>Comfort and airflow score for each position, out of 1. Higher is better. Select a point to see that position in the 3D model.</figcaption>
+    <figcaption>Simulated comfort and airflow score for each position, out of 1. Higher is better. Select a point to see that position in the 3D model.</figcaption>
     <details>
       <summary>Show the numbers as a table</summary>
       <div class="table-scroll" id="chart-table"></div>
@@ -287,7 +287,7 @@
     <li>Drain pump: <a href="https://tradieverify.com.au/guides/how-much-does-split-system-ac-installation-cost-in-australia/" rel="noopener noreferrer">Tradie Verify</a>.</li>
     <li>Running cost: a 2.5 kW Daikin draws about 0.53 kW, at the NSW average rate of 38.15 cents a kilowatt-hour (Finder).</li>
     <li>Renter demand: <a href="https://insight.domain.com.au/?p=8399" rel="noopener noreferrer">Domain</a>.</li>
-    <li>The 3D model and the 77-position test: built from 19 photos of the room, with scale taken from the brick courses. Airflow is a simplified model for comparing positions, not a prediction of exact air speeds.</li>
+    <li>The 3D model and the 77-position test: the model was built from 19 photos of the room, with scale taken from the brick courses. The test is a computer simulation run inside that model. Its airflow is simplified, for comparing positions with each other, not for predicting exact air speeds.</li>
   </ul>
 </section>
 
