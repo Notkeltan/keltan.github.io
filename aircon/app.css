@@ -216,6 +216,7 @@ td.num, th.num { text-align: right; }
 .sources { font-size: 0.95rem; }
 .close { margin-top: clamp(3rem, 8vw, 5rem); padding-top: 1.75rem; border-top: 2px solid var(--ink); }
 .close-line { font: 600 clamp(1.4rem, 4vw, 1.8rem)/1.2 var(--head); margin-bottom: 1.25rem; text-wrap: balance; }
+.px { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 .noscript { max-width: 43rem; margin: 0 auto 3rem; padding: 0 1.25rem; color: var(--ink-2); }
 
 @media print {
